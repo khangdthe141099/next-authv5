@@ -27,6 +27,9 @@ export const login = async (values: LoginType) => {
         case "CredentialsSignin":
           return { error: "Invalid credentials" };
 
+        case "AccessDenied":
+          return { error: "User not exist or user email is not verified" };
+
         default:
           return { error: "Something went wrong" };
       }
